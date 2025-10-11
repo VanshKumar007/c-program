@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char n[100];                     
+    scanf("%s", n);                  
+
+    char *word[] = {"Zero", "One", "Two", "Three", "Four", 
+                    "Five", "Six", "Seven", "Eight", "Nine"};
+
+    int i = 0;
+    while (n[i] != '\0') {         
+        printf("%s", word[n[i] - '0']); 
+        
+        if (n[i + 1] != '\0')     
+            printf(" ");
+        i++;
+    }
+
+    return 0;
+}
