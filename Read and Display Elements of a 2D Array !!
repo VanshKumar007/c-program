@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int r, c;
+    
+    // Input number of rows and columns
+    scanf("%d %d", &r, &c);
+
+    int a[100][100]; // Declare 2D array
+
+    // Input elements of the array
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // Print elements row by row
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            printf("%d ", a[i][j]); // print element with space
+        }
+        printf("\n"); // move to next line after each row
+    }
+
+    return 0;
+}
