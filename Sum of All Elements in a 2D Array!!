@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int r, c, sum = 0;
+    scanf("%d %d", &r, &c); //input rows and columns
+    int a[100][100];
+//input elements and calculate sum together
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+            sum = sum + a[i][j]; //add each element to sum
+        }
+    }
+
+    printf("%d", sum); //print total sum
+    return 0;
+}
